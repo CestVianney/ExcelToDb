@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExcelToDBViewer</title>
+    <link rel="stylesheet" href="./excelToDb.css">
+    <script src="./excelToDb.js"></script>
+
+</head>
+
+<body>
+    <div class="page">
+        <div class="bandeGauche">
+            <button class="exitAppBtn" onclick="exitApp()">Arrêter l'application</button>
+            <div class="importExcelDiv" id="button-7" onclick="importExcel()">
+                <div id="dub-arrow"><img src="./resources/excel.png" /></div>
+                <div id="uploadLogo"><img src="./resources/upload.png" /></div>
+            </div>
+            <a href="./content/frontsrc/guideUtilisation.html" target="_blank"><button class="guideUtilBtn">Guide d'utilisation</button></a>
+            <button class="contactBtn" onclick="alertContact()">Crédits</button>
+        </div>
+        <div class="bandeDroite">
+            <button class="buttonDefinitionCheminPdf" id="btn" onclick="findPath()">Définition du dossier de
+                destination (Reference Piece)</button>
+            <div class="ouvrirpdfmanuellement">
+                <input type="text" class="buttonOpenPdf" id="openchosenpdf" placeholder="PDF N°"
+                    onkeydown="getchosenpdfkeydown()">
+                <button class="ouvrirBtn" onclick="getchosenpdf()">Ouvrir</button>
+            </div>
+            <input type="text" class="filter" id="fltr" onkeyup="filtrer()" placeholder="Filtrer par Libelle ...">
+            <table class='dataRetriever' id='retriever' style="width:60%">
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>Journal</th>
+                        <th>Date</th>
+                        <th>Reference Piece</th>
+                        <th>Libelle</th>
+                        <th>TVA</th>
+                        <th>HT</th>
+                        <th>TTC</th>
+                        <th>Check</th>
+                    </tr>
+                </thead>
+                <tbody id="listeDonnees">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+
+</html>

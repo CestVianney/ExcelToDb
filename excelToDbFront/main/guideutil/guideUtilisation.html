@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide d'utilisation - ExcelViewer</title>
+    <style>
+        body {
+            background-color: grey;
+        }
+        td {
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+    <p>ExcelViewer permet de lire un certain type de document Excel (.xlsx), dont les colonnes sont respectivement dans cet ordre :</p>
+    <table>
+        <th>
+            <tr>
+                <td>Journal</td>
+                <td>Date</td>
+                <td>Compte</td>
+                <td>Ref. Piece</td>
+                <td>Pièce</td>
+                <td>Libellé</td>
+                <td>Débit</td>
+                <td>Crédit</td>
+                <td>Echeance</td>
+            </tr>
+        </th>
+    </table>
+    <p>Note : Le titre des colonnes importe peu, seul l'ordre (Journal > Date > Compte > ...) compte.</p>
+
+    <h2>Utilisation :</h2>
+    <p>
+        - Afin de lancer l'application, il suffit de double cliquer sur <strong>ExcelViewer.exe</strong>. </br>
+        - Tant que l'application ne sera pas lancée, le fond de l'écran de la page ExcelViewer.html restera blanche avec comme fond d'écran "Application non lancée". <br>
+        - Lorsque l'application est lancée, un fond d'écran aléatoire apparaitra et signifiera que l'outil sera prêt à l'emploi.
+    </p>
+        <h3>Application lancée</h3>
+    <p>
+        <img src="./resources/applicationLancee.jpg"/>
+        <br> - Arrêter l'application : Permet d'arrêter l'application. Dans les 5 secondes, le fond d'écran disparaîtra et attestera de la bonne fermeture de l'application.
+        <br> Note : Il n'y a pas de problème si l'application n'est pas coupée après utilisation, mais c'est toujours mieux d'éteindre la pièce une fois qu'on en sort !
+        <br> - Icône d'upload (verte, à gauche) : Permet de charger l'Excel. Une fois chargé, le tableau se mettra à jour. 
+        <br> Note : Si un autre type de document est donné (pdf, image, ...), rien ne se passera.
+        <br> - Guide d'utilisation :)
+        <br> - Crédits : Mon contact
+        <br> - Définition du dossier de destination (Référence Piece) : Localise le <strong>dossier</strong> contenant des PDFs, permettant de les ouvrir via la balise en dessous (PDF N°) & via les raccourcis dans le tableau
+        <br> - PDF N°: Permet d'ouvrir un PDF contenu dans le dossier renseigné ci-dessus via ses derniers caractères (ex: "AC000004972.pdf" -> Peut s'ouvrir en écrivant "4972", "04972", ...).
+        <br> - Filtrer par libelle : Filtre l'ensemble des lignes via le libelle.
+        <br> <img src="./resources/tableauDeploye.jpg"/>
+        <br> - Dans ce tableau, le bouton sous "Reference Pièce" est cliquable et ouvre directement le PDF situé dans le dossier renseigné via <strong>Définition du dossier de destination</strong>.
+        <br> - Dans ce tableau, il est possible de cocher une case "check" afin de suivre son évolution. Cliquer ou non ce bouton n'a aucune influence sur le reste de la page.
+    </p>
+</body>
+</html>
